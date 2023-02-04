@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar-section -->
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#post">Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#newpost">New Post</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto txet-white mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i> S.M.Ahmad
+                    </a>
+                    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- sectiom-2 -->
+    <section class="top bg-primary py-5 px-5 text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <i class="fa-sharp fa-solid fa-gear"></i>
+                </div>
+                <div class="col-auto">
+                    <h1 class="display-5 fw-bolder">
+                        Dashboard
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal-Sction -->
+    <section id="post" class="modals my-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row justify-content-between">
+                        <div class="col-md-3 mt-3">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">
+                                <i class="fa-solid fa-plus"></i> Add Post
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary text-white">
+                                            <h5 class="modal-title" id="exampleModalLabel">Add Post</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="needs-validation" novalidate>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationCustom01">First name</label>
+                                                        <input type="text" class="form-control" id="validationCustom01"
+                                                            value="Mark" required>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationCustom02">Last name</label>
+                                                        <input type="text" class="form-control" id="validationCustom02"
+                                                            value="Otto" required>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationCustom03">City</label>
+                                                        <input type="text" class="form-control" id="validationCustom03"
+                                                            required>
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid city.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 mb-3">
+                                                        <label for="validationCustom04">State</label>
+                                                        <select class="custom-select" id="validationCustom04" required>
+                                                            <option selected disabled value="">Choose...</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Please select a valid state.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 mb-3">
+                                                        <label for="validationCustom05">Zip</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            required>
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="invalidCheck" required>
+                                                        <label class="form-check-label" for="invalidCheck">
+                                                            Agree to terms and conditions
+                                                        </label>
+                                                        <div class="invalid-feedback">
+                                                            You must agree before submitting.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-3">
+                            <button type="button" class="btn btn-success" data-toggle="modal"
+                                data-target="#exampleModal1">
+                                <i class="fa-solid fa-plus"></i> Add Category
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-success text-white">
+                                            <h5 class="modal-title " id="exampleModalLabel2"> Add Category</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="needs-validation" novalidate>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationCustom01">First name</label>
+                                                        <input type="text" class="form-control" id="validationCustom01"
+                                                            value="Mark" required>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationCustom02">Last name</label>
+                                                        <input type="text" class="form-control" id="validationCustom02"
+                                                            value="Otto" required>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationCustom03">City</label>
+                                                        <input type="text" class="form-control" id="validationCustom03"
+                                                            required>
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid city.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 mb-3">
+                                                        <label for="validationCustom04">State</label>
+                                                        <select class="custom-select" id="validationCustom04" required>
+                                                            <option selected disabled value="">Choose...</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Please select a valid state.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 mb-3">
+                                                        <label for="validationCustom05">Zip</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            required>
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="invalidCheck" required>
+                                                        <label class="form-check-label" for="invalidCheck">
+                                                            Agree to terms and conditions
+                                                        </label>
+                                                        <div class="invalid-feedback">
+                                                            You must agree before submitting.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-3">
+                            <button type="button" class="btn btn-warning" data-toggle="modal"
+                                data-target="#exampleModal2">
+                                <i class="fa-solid fa-plus"></i> Add User
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-warning text-dark">
+                                            <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="needs-validation" novalidate>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationCustom01">First name</label>
+                                                        <input type="text" class="form-control" id="validationCustom01"
+                                                            value="Mark" required>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationCustom02">Last name</label>
+                                                        <input type="text" class="form-control" id="validationCustom02"
+                                                            value="Otto" required>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationCustom03">City</label>
+                                                        <input type="text" class="form-control" id="validationCustom03"
+                                                            required>
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid city.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 mb-3">
+                                                        <label for="validationCustom04">State</label>
+                                                        <select class="custom-select" id="validationCustom04" required>
+                                                            <option selected disabled value="">Choose...</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            Please select a valid state.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 mb-3">
+                                                        <label for="validationCustom05">Zip</label>
+                                                        <input type="text" class="form-control" id="validationCustom05"
+                                                            required>
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid zip.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="invalidCheck" required>
+                                                        <label class="form-check-label" for="invalidCheck">
+                                                            Agree to terms and conditions
+                                                        </label>
+                                                        <div class="invalid-feedback">
+                                                            You must agree before submitting.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-primary" type="submit">Submit form</button>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-main -->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <h3 class="bg-light p-3">
+                                Latest Posts
+                            </h3>
+                            <thead>
+                                <tr class="bg-dark text-white">
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                    <th class="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>
+                                        <a href="#" class="btn btn-secondary">
+                                            &Rarr; Details
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>
+                                        <a href="#" class="btn btn-secondary">
+                                            &Rarr; Details
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>
+                                        <a href="#" class="btn btn-secondary">
+                                            &Rarr; Details
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>
+                                        <a href="#" class="btn btn-secondary">
+                                            &Rarr; Details
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>
+                                        <a href="#" class="btn btn-secondary">
+                                            &Rarr; Details
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>
+                                        <a href="#" class="btn btn-secondary">
+                                            &Rarr; Details
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 bg-primary text-center text-white mb-3 rounded-3">
+                        <h1 class="mb-4 ">Post</h1>
+                        <i class="fa-solid fa-pen"></i>
+                        <h1 class="displat-1">6
+
+                        </h1>
+                        <a href="#" class="btn btn-outline-light w-50">View</a>
+                    </div>
+                    <div class="p-3 bg-success text-center text-white mb-3 rounded-3">
+                        <h1 class="mb-4 ">Categories</h1>
+                        <i class="fa-solid fa-pen"></i>
+                        <h1 class="displat-1">11
+
+                        </h1>
+                        <a href="#" class="btn btn-outline-light w-50">View</a>
+                    </div>
+                    <div class="p-3 bg-primary text-center text-white mb-3 rounded-3">
+                        <h1 class="mb-4 ">Users</h1>
+                        <i class="fa-solid fa-user-group"></i>
+                        <h1 class="displat-1">982
+
+                        </h1>
+                        <a href="#" class="btn btn-outline-light w-50">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark py-5">
+   <p class="text-center lead text-muted">
+    Copyright &copy; Dec 2022
+   </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

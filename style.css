@@ -1,0 +1,15 @@
+.fa-user:before {
+  font-size: 20px;
+}
+.fa-gear:before {
+  font-size: 60px;
+}
+.fa-pen:before {
+  font-size: 25px;
+}
+.group:before {
+  font-size: 25px;
+}
+.text-muted {
+  color: white !important;
+}
